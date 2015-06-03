@@ -1,0 +1,1441 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#"
+     xml:base="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAlkohol -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAlkohol">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Alkohol"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Heißgetränk"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAroma -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAroma">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Aroma"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatEis -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatEis">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Eis"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Heißgetränk"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Heißgetränk"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zutaten"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatKoffeingehalt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatKoffeingehalt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Heißgetränk"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Koffeingehalt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatMilch -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatMilch">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Milch"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatUrsprung -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatUrsprung">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Heißgetränk"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatZubereitungsart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatZubereitungsart">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kaffee"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zubereitungsart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#wirdServiertIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#wirdServiertIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Heißgetränk"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Serviert"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAlkoholgehalt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAlkoholgehalt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Alkohol"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Alkohol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Alkohol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zutaten"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Amaretto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Amaretto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Aroma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Aprikose -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Aprikose">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Aroma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Aroma -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Aroma">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zutaten"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Chailatte -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Chailatte">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAroma"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Vanille"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Honig"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zimt"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatMilch"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Sojamilch"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Heißgetränk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Cognac -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Cognac">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAlkoholgehalt"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;float">60.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;float">72.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Alkohol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Eierlikör -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Eierlikör">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAlkoholgehalt"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;float">14.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;float">20.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Alkohol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Einspänner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Einspänner">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KaffeeSchwarz"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Schlagobers"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatUrsprung"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#wirdServiertIn"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Glas"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kaffee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Eis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Eis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zutaten"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Eiskaffee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Eiskaffee">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatEis"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Vanilleeis"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KaffeeSchwarz"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zucker"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatMilch"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#LaktosefreieMilch"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatUrsprung"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kaffee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Filterkaffee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Filterkaffee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zubereitungsart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#FrischGemahlen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#FrischGemahlen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zubereitungsart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Gespritzter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Gespritzter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAlkohol"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Cognac"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAlkohol"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Weinbrand"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KaffeeSchwarz"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatUrsprung"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kaffee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Glas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Glas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Serviert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#GroßeSchale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#GroßeSchale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Schale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Haselnuss -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Haselnuss">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Aroma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Haselnusseis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Haselnusseis">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAroma"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Haselnuss"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatMilch"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Vollmilch"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Eis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#HeisseSchokolade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#HeisseSchokolade">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kakaopulver"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Schokolade"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatMilch"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kondensmilch"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Heißgetränk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Heißgetränk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Heißgetränk"/>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Honig -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Honig">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zutaten"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Häferlkaffee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Häferlkaffee">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KaffeeSchwarz"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Milch"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatUrsprung"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatZubereitungsart"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Filterkaffee"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#wirdServiertIn"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Schale"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kaffee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kaffee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kaffee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Heißgetränk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KaffeeKirsch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KaffeeKirsch">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KaffeeSchwarz"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kirschwasser"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatUrsprung"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kaffee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KaffeeSchwarz -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KaffeeSchwarz">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zutaten"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kakaopulver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kakaopulver">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Schokolade"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zutaten"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Karamel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Karamel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zutaten"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kirsche -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kirsche">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Aroma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kirschwasser -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kirschwasser">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zutaten"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KleineSchale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KleineSchale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Schale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KleinerBrauner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KleinerBrauner">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Milch"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Schlagobers"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KaffeeSchwarz"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatUrsprung"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#wirdServiertIn"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KleineSchale"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kaffee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Koffeinfrei -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Koffeinfrei">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Koffeingehalt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Koffeingehalt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Koffeingehalt"/>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kondensmilch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kondensmilch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Milch"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#LaktosefreieMilch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#LaktosefreieMilch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Milch"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Limettenschnitzel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Limettenschnitzel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zutaten"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Milch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Milch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zutaten"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Milchkaffee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Milchkaffee">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KaffeeSchwarz"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatMilch"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Vollmilch"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatUrsprung"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kaffee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Milchschaum -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Milchschaum">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zutaten"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Orangenlikör -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Orangenlikör">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAlkoholgehalt"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;float">14.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;float">20.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Alkohol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Othello -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Othello">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#HeisseSchokolade"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KaffeeSchwarz"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatUrsprung"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kaffee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Rum -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Rum">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAlkoholgehalt"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;float">33.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;float">37.5</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Alkohol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#RüdesheimerKaffee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#RüdesheimerKaffee">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAlkohol"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Weinbrand"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAroma"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Vanille"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KaffeeSchwarz"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Schlagobers"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zucker"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatUrsprung"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kaffee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Schale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Schale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Serviert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Schlagobers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Schlagobers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zutaten"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Schokolade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Schokolade">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kakaopulver"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Milch"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zutaten"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#SchwachKoffeinhaltig -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#SchwachKoffeinhaltig">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Koffeingehalt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Serviert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Serviert"/>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Sojamilch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Sojamilch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Milch"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#StarkKoffeinhaltig -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#StarkKoffeinhaltig">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Koffeingehalt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Traditional -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Traditional">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Honig"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KaffeeSchwarz"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Limettenschnitzel"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatKoffeingehalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#SchwachKoffeinhaltig"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatUrsprung"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kaffee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Vanille -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Vanille">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Aroma"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Vanilleeis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Vanilleeis">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAroma"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Vanille"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatMilch"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Vollmilch"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Eis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Vodka -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Vodka">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAlkoholgehalt"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;float">35.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;float">40.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Alkohol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Vollmilch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Vollmilch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Milch"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Wasser -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Wasser">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zutaten"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Weinbrand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Weinbrand">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAlkoholgehalt"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;float">52.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;float">86.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Alkohol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Whiskey -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Whiskey">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatAlkoholgehalt"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;float">60.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;float">75.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Alkohol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#WienerMelange -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#WienerMelange">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatInhalt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KaffeeSchwarz"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatMilch"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Vollmilch"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#hatUrsprung"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kaffee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zimt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zimt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zutaten"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zubereitungsart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zubereitungsart"/>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zucker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zucker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zutaten"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zutaten -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Zutaten"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Deutschland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Deutschland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Frankreich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Frankreich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Irland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Irland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Italien -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Italien">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kenia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kenia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinChailatte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinChailatte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Chailatte"/>
+        <hatUrsprung rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Italien"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinCognac -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinCognac">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Cognac"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinEinspänner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinEinspänner">
+        <wirdServiertIn rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinGlas"/>
+        <hatInhalt rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinKaffeeSchwarz"/>
+        <hatInhalt rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinSchlagobers"/>
+        <hatUrsprung rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Österreich"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinGespritzter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinGespritzter">
+        <hatUrsprung rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Deutschland"/>
+        <hatAlkohol rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinCognac"/>
+        <hatInhalt rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinKaffeeSchwarz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinGlas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinGlas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Glas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinHonig -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinHonig">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Honig"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinHäferlkaffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinHäferlkaffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Häferlkaffee"/>
+        <hatUrsprung rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Österreich"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinKaffeeKirsch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinKaffeeKirsch">
+        <hatInhalt rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinKaffeeSchwarz"/>
+        <hatInhalt rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinKirschwasser"/>
+        <hatUrsprung rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Österreich"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinKaffeeSchwarz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinKaffeeSchwarz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KaffeeSchwarz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinKirschwasser -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinKirschwasser">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Kirschwasser"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinKleinerBrauner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinKleinerBrauner">
+        <hatInhalt rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinKaffeeSchwarz"/>
+        <hatInhalt rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinSchlagobers"/>
+        <wirdServiertIn rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeineKleineSchale"/>
+        <hatUrsprung rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Österreich"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinLimettenschnitzel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinLimettenschnitzel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Limettenschnitzel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinMilchkaffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinMilchkaffee">
+        <hatUrsprung rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Deutschland"/>
+        <hatInhalt rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinKaffeeSchwarz"/>
+        <hatMilch rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeineVollmilch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinSchlagobers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinSchlagobers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Schlagobers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinSchwachKoffeinhaltig -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinSchwachKoffeinhaltig">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#SchwachKoffeinhaltig"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinTraditional -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinTraditional">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Traditional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinWienerMelange -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeinWienerMelange">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Milchkaffee"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeineKleineSchale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeineKleineSchale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#KleineSchale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeineVollmilch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#MeineVollmilch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Vollmilch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Niederlande -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Niederlande">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Portugal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Portugal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Schweiz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Schweiz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Spanien -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Spanien">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#USA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#USA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Österreich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Österreich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7#Herkunftsland"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
