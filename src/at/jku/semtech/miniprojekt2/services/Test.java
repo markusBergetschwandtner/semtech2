@@ -7,7 +7,9 @@ public class Test {
      */
     public static void main(String[] args) {
 	KaffeeService service = new KaffeeService();
-	service.printAllKaffee();
+	// service.printAllKaffee();
+
+	System.out.println(service.bringstDuZutatenAlleBabo());
 
     }
 

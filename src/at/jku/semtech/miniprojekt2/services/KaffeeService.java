@@ -4,6 +4,7 @@ import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import org.semanticweb.HermiT.Configuration;
 import org.semanticweb.HermiT.Reasoner.ReasonerFactory;
@@ -14,21 +15,26 @@ import org.semanticweb.owlapi.model.OWLAnnotation;
 import org.semanticweb.owlapi.model.OWLAnnotationObjectVisitorEx;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
+import org.semanticweb.owlapi.model.OWLClassExpression;
 import org.semanticweb.owlapi.model.OWLDataFactory;
-import org.semanticweb.owlapi.model.OWLDataProperty;
+import org.semanticweb.owlapi.model.OWLEntity;
 import org.semanticweb.owlapi.model.OWLIndividual;
 import org.semanticweb.owlapi.model.OWLLiteral;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;
+import org.semanticweb.owlapi.model.OWLObjectProperty;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyChange;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
+import org.semanticweb.owlapi.model.OWLOntologyStorageException;
+import org.semanticweb.owlapi.reasoner.Node;
+import org.semanticweb.owlapi.reasoner.NodeSet;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.util.OWLObjectVisitorExAdapter;
 
 public class KaffeeService {
     private static final String URI = "http://www.semanticweb.org/markus/ontologies/2015/4/untitled-ontology-7";
-    private static final String OWLFILE = "kaffee_ontologie.xml";
+    private static final String OWLFILE = "kaffee_ontologie.owl";
 
     private static IRI iri;
     private static OWLOntologyManager manager;
@@ -69,6 +75,7 @@ public class KaffeeService {
 	dataFactory = OWLManager.getOWLDataFactory();
 
 	ontology = null;
+
 	try {
 	    ontology = manager.loadOntologyFromOntologyDocument(new File(u
 		    .getFile()));
@@ -115,8 +122,9 @@ public class KaffeeService {
 	startUp();
 
 	for (OWLClass claus : ontology.getClassesInSignature()) {
-	    for (OWLIndividual individual : claus.getIndividualsInSignature()) {
-		System.out.println(individual);
+	    System.out.println(claus);
+	    for (OWLIndividual individual : claus.getIndividuals(ontology)) {
+		System.out.println("        " + individual);
 	    }
 	}
     }
@@ -138,20 +146,99 @@ public class KaffeeService {
 	changes.add(addAxiom);
 	manager.applyChange(addAxiom);
 
-	changes.add(addDataProperty(individual, PropertyType.URSPRUNG, land));
-	changes.add(addDataProperty(individual, PropertyType.SERVIERT,
-		serviertIn));
+	changes.add(addObjectProperty(individual, PropertyType.URSPRUNG,
+		getIndividual(land)));
+	changes.add(addObjectProperty(individual, PropertyType.SERVIERT,
+		getIndividual(serviertIn)));
 
+	OWLIndividual zutat;
+	Set<OWLClassExpression> type;
+
+	for (String zutatName : zutaten) {
+	    zutat = getIndividual(zutatName);
+	    type = zutat.getTypes(ontology);
+
+	    if (zutat != null) {
+		// TODO machst Du Babo
+		if (type.contains(null)) {
+		    changes.add(addObjectProperty(individual,
+			    PropertyType.MILCH, zutat));
+		} else {
+		    changes.add(addObjectProperty(individual,
+			    PropertyType.INHALT, zutat));
+		}
+	    }
+	}
+
+	manager.applyChanges(changes);
+
+	try {
+	    manager.saveOntology(ontology);
+	} catch (OWLOntologyStorageException e) {
+	    e.printStackTrace();
+	}
     }
 
-    private static OWLOntologyChange addDataProperty(OWLIndividual individual,
-	    PropertyType property, String val) {
-	OWLDataProperty prop = dataFactory.getOWLDataProperty(IRI.create(iri
-		+ "#" + property.getString()));
+    private static OWLOntologyChange addObjectProperty(
+	    OWLIndividual individual, PropertyType property,
+	    OWLIndividual object) {
+	OWLObjectProperty prop = dataFactory.getOWLObjectProperty(IRI
+		.create(iri + "#" + property.getString()));
 
-	OWLAxiom axiom = dataFactory.getOWLDataPropertyAssertionAxiom(prop,
-		individual, val);
+	OWLAxiom axiom = dataFactory.getOWLObjectPropertyAssertionAxiom(prop,
+		individual, object);
 
 	return new AddAxiom(ontology, axiom);
+    }
+
+    private static OWLIndividual getIndividual(String name) {
+	OWLIndividual individual;
+	individual = dataFactory.getOWLNamedIndividual(IRI.create(iri + "#"
+		+ name));
+	return individual;
+    }
+
+    public static List<String> bringstDuHerkunftslandAlleBabo() {
+	startUp();
+
+	OWLClass landClaus = dataFactory.getOWLClass(IRI.create(iri
+		+ "#Herkunftsland"));
+	List<String> laender = new ArrayList<String>();
+
+	for (Node<OWLNamedIndividual> nodes : reasoner.getInstances(landClaus,
+		false).getNodes()) {
+	    for (OWLNamedIndividual land : nodes.getEntities()) {
+		laender.add(land.getIRI().toString().replaceAll(iri + "#", ""));
+	    }
+	}
+	return laender;
+    }
+
+    public static List<Object> bringstDuZutatenAlleBabo() {
+	startUp();
+
+	OWLClass zutatenClaus = dataFactory.getOWLClass(IRI.create(iri
+		+ "#Zutaten"));
+	List<Object> zutaten = new ArrayList<Object>();
+
+	NodeSet<OWLClass> zutatenClaeuse = reasoner.getSubClasses(zutatenClaus,
+		true);
+
+	for (OWLClass claus : zutatenClaeuse.getFlattened()) {
+	    zutaten.add(labelFor(claus, ontology));
+	}
+
+	return zutaten;
+    }
+
+    private static String labelFor(OWLEntity clazz, OWLOntology o) {
+	Set<OWLAnnotation> annotations = clazz.getAnnotations(o);
+	for (OWLAnnotation anno : annotations) {
+	    String result = anno.accept(labelExtractor);
+	    if (result != null) {
+		return result;
+	    }
+	}
+	return clazz.getIRI().getFragment();
     }
 }
