@@ -2,6 +2,7 @@
     <wb-module deploy-name="semtech2">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/lib" source-path="/lib"/>
         <property name="context-root" value="semtech2"/>
         <property name="java-output-path" value="/semtech2/bin"/>
     </wb-module>

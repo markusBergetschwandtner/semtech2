@@ -225,7 +225,25 @@ public class KaffeeService {
 		true);
 
 	for (OWLClass claus : zutatenClaeuse.getFlattened()) {
+	    List<String> subZutaten = new ArrayList<String>();
+	    OWLClass zutatenSubClaus = dataFactory.getOWLClass(IRI.create(iri
+		    + "#" + labelFor(claus, ontology)));
+	    NodeSet<OWLClass> zutatenSubClaeuse = reasoner.getSubClasses(
+		    zutatenSubClaus, true);
+
 	    zutaten.add(labelFor(claus, ontology));
+	    boolean subZ = false;
+	    for (OWLClass subClaus : zutatenSubClaeuse.getFlattened()) {
+		if (labelFor(subClaus, ontology).equals("Nothing")) {
+		    break;
+		} else {
+		    subZ = true;
+		    subZutaten.add(labelFor(subClaus, ontology));
+		}
+	    }
+	    if (subZ) {
+		zutaten.add(subZutaten);
+	    }
 	}
 
 	return zutaten;
