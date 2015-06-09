@@ -41,7 +41,7 @@
 					<table class="table table-striped table-bordered table-hover">
 						<thead>
 							<tr>
-								<th>Zutat</th>
+								<th>Zutaten</th>
 								<th>auswählen</th>
 							</tr>
 						</thead>
@@ -70,9 +70,11 @@
 						</tbody>
 					</table>
 				</div>
-				<div class="col-md-4">
-					
-				</div>			
+			</div>
+			<div class="col-md-4">
+				<form action="singleKaffee.jsp" method="get" name="formKaffee">
+					<button type="submit" class="btn btn-default">passenden Kaffee suchen</button>
+				</form>
 			</div>
 		</div>
 	</div>

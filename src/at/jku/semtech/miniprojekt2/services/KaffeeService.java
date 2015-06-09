@@ -249,6 +249,14 @@ public class KaffeeService {
 	return zutaten;
     }
 
+    public static List<String> bringstDuKaffeesByZutaten(List<String> zutaten) {
+	startUp();
+	// TODO bringst du babo
+	List<String> result = new ArrayList<String>();
+
+	return result;
+    }
+
     private static String labelFor(OWLEntity clazz, OWLOntology o) {
 	Set<OWLAnnotation> annotations = clazz.getAnnotations(o);
 	for (OWLAnnotation anno : annotations) {

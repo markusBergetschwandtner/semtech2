@@ -9,7 +9,7 @@ public class Test {
 	KaffeeService service = new KaffeeService();
 	// service.printAllKaffee();
 
-	System.out.println(service.bringstDuZutatenAlleBabo());
+	System.out.println(service.bringstDuKaffeesByZutaten(null));
 
     }
 
