@@ -32,6 +32,7 @@
 				<h1>Kaffee suchen</h1>
 			</div>
 		</div>
+		<form action="showKaffee.jsp" method="get" name="formKaffee">
 		<div class="row">
 			<div class="col-md-12">
 				<jsp:include page="menu.html" />
@@ -72,11 +73,11 @@
 				</div>
 			</div>
 			<div class="col-md-4">
-				<form action="singleKaffee.jsp" method="get" name="formKaffee">
+				
 					<button type="submit" class="btn btn-default">passenden Kaffee suchen</button>
-				</form>
 			</div>
 		</div>
+		</form>
 	</div>
 </body>
 </html>
