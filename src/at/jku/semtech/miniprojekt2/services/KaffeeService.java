@@ -310,9 +310,6 @@ public class KaffeeService {
 	NodeSet<OWLClass> heissgetraenkClaeuse = reasoner.getSubClasses(
 		heissgetraenkClaus, false);
 
-	OWLObjectProperty hatInhalt = dataFactory.getOWLObjectProperty(IRI
-		.create(iri + "#hatInhalt"));
-
 	for (OWLClass claus : heissgetraenkClaeuse.getFlattened()) {
 	    counter = 0;
 
