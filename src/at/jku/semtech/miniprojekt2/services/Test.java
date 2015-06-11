@@ -26,12 +26,8 @@ public class Test {
 	List<String> list = new ArrayList<>();
 
 	list.add("KaffeeSchwarz");
-	// list.add("Schlagobers");
-	// service.addNewKaffee("BabosKaffee", "BaboLand", "BabosSchale", list);
-	System.out.println(service.bringstDuKaffeesVonDerZutatenBabo(list));
-
-	//
-	service.printAllKaffee();
+	list.add("Schlagobers");
+	service.addNewKaffee("BabosKaffee1", "BaboLand", "BabosSchale", list);
 
     }
 
