@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -142,14 +143,12 @@ public class KaffeeService {
 
 	OWLClass clausKaffee = dataFactory.getOWLClass(IRI.create(iri
 		+ "#Kaffee"));
-	OWLClass clausZ0 = dataFactory.getOWLClass(IRI.create(iri + "#"
-		+ zutaten.get(0)));
 	OWLObjectProperty hatInhalt = dataFactory.getOWLObjectProperty(IRI
 		.create(iri + "#hatInhalt"));
-	OWLObjectProperty hatUrsprung = dataFactory.getOWLObjectProperty(IRI
-		.create(iri + "#hatUrsprung"));
-	OWLObjectProperty serviertIn = dataFactory.getOWLObjectProperty(IRI
-		.create(iri + "#serviertIn"));
+	// OWLObjectProperty hatUrsprung = dataFactory.getOWLObjectProperty(IRI
+	// .create(iri + "#hatUrsprung"));
+	// OWLObjectProperty serviertIn = dataFactory.getOWLObjectProperty(IRI
+	// .create(iri + "#serviertIn"));
 
 	OWLClass claus = dataFactory.getOWLClass(IRI.create(iri + "#" + name));
 
@@ -163,15 +162,19 @@ public class KaffeeService {
 	manager.addAxiom(ontology, subClass);
 
 	// add class expressions
+	Set<OWLClassExpression> expressions = new HashSet<OWLClassExpression>();
 	for (String s : zutaten) {
 	    OWLClass clausZutat = dataFactory.getOWLClass(IRI.create(iri + "#"
 		    + s));
-	    OWLClassExpression ex = dataFactory.getOWLObjectAllValuesFrom(
+	    OWLClassExpression ex = dataFactory.getOWLObjectSomeValuesFrom(
 		    hatInhalt, clausZutat);
 	    OWLEquivalentClassesAxiom eq = dataFactory
-		    .getOWLEquivalentClassesAxiom(clausZutat, ex);
+		    .getOWLEquivalentClassesAxiom(claus, ex);
 	    manager.addAxiom(ontology, eq);
+	    expressions.add(ex);
 	}
+
+	manager.saveOntology(ontology);
 
 	saveFile();
     }
