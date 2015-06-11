@@ -27,7 +27,7 @@ public class Test {
 
 	list.add("KaffeeSchwarz");
 	list.add("Schlagobers");
-	service.addNewKaffee("BabosKaffee1", "BaboLand", "BabosSchale", list);
+	service.addNewKaffee("BabosKaffee3", "BaboLand", "BabosSchale", list);
 
     }
 

@@ -26,6 +26,7 @@ import org.semanticweb.owlapi.model.OWLEquivalentClassesAxiom;
 import org.semanticweb.owlapi.model.OWLIndividual;
 import org.semanticweb.owlapi.model.OWLLiteral;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;
+import org.semanticweb.owlapi.model.OWLObjectIntersectionOf;
 import org.semanticweb.owlapi.model.OWLObjectProperty;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyChange;
@@ -143,12 +144,14 @@ public class KaffeeService {
 
 	OWLClass clausKaffee = dataFactory.getOWLClass(IRI.create(iri
 		+ "#Kaffee"));
+	OWLClass clausHerkunft = dataFactory.getOWLClass(IRI.create(iri
+		+ "#Herkunftsland"));
 	OWLObjectProperty hatInhalt = dataFactory.getOWLObjectProperty(IRI
 		.create(iri + "#hatInhalt"));
-	// OWLObjectProperty hatUrsprung = dataFactory.getOWLObjectProperty(IRI
-	// .create(iri + "#hatUrsprung"));
-	// OWLObjectProperty serviertIn = dataFactory.getOWLObjectProperty(IRI
-	// .create(iri + "#serviertIn"));
+	OWLObjectProperty hatUrsprung = dataFactory.getOWLObjectProperty(IRI
+		.create(iri + "#hatUrsprung"));
+	OWLObjectProperty serviertIn = dataFactory.getOWLObjectProperty(IRI
+		.create(iri + "#serviertIn"));
 
 	OWLClass claus = dataFactory.getOWLClass(IRI.create(iri + "#" + name));
 
@@ -168,12 +171,19 @@ public class KaffeeService {
 		    + s));
 	    OWLClassExpression ex = dataFactory.getOWLObjectSomeValuesFrom(
 		    hatInhalt, clausZutat);
-	    OWLEquivalentClassesAxiom eq = dataFactory
-		    .getOWLEquivalentClassesAxiom(claus, ex);
-	    manager.addAxiom(ontology, eq);
 	    expressions.add(ex);
+
 	}
 
+	OWLClassExpression ex = dataFactory.getOWLObjectSomeValuesFrom(
+		hatUrsprung, clausHerkunft);
+	expressions.add(ex);
+
+	OWLObjectIntersectionOf union = dataFactory
+		.getOWLObjectIntersectionOf(expressions);
+	OWLEquivalentClassesAxiom eq1 = dataFactory
+		.getOWLEquivalentClassesAxiom(claus, union);
+	manager.addAxiom(ontology, eq1);
 	manager.saveOntology(ontology);
 
 	saveFile();
